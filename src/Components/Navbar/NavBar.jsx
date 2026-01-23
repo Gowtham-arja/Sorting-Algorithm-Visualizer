@@ -8,7 +8,7 @@ import StartBtn from './StartBtn'
 import SpeedMenu from './SpeedMenu'
 
 
-function NavBar({ array, setArray, sortingAlgo, setSortingAlgo, speed, setSpeed, StartSorting, setSorted, isSortingRef, setComparing }) {
+function NavBar({ array, setArray, sortingAlgo, setSortingAlgo, speed, setSpeed, StartSorting, setSorted, isSortingRef, setComparing, setSelectionIndex }) {
 
 
   return (
@@ -19,13 +19,29 @@ function NavBar({ array, setArray, sortingAlgo, setSortingAlgo, speed, setSpeed,
       setSorted={setSorted}
       />
 
-      <RandomBtn array={array} setArray={setArray} setSorted={setSorted} isSortingRef={isSortingRef} setComparing={setComparing} />
+      <RandomBtn
+      array={array}
+      setArray={setArray}
+      setSorted={setSorted}
+      isSortingRef={isSortingRef}
+      setComparing={setComparing}
+      setSelectionIndex={setSelectionIndex} 
+      />
 
-      <ArrayDisplay array={array} />
+      <ArrayDisplay
+      array={array}
+      />
 
-      <StartBtn array={array} sortingAlgo={sortingAlgo} speed={speed} StartSorting={StartSorting} />
+      <StartBtn
+      array={array}
+      sortingAlgo={sortingAlgo}
+      speed={speed} StartSorting={StartSorting}
+      />
 
-      <SpeedMenu Speed={speed} setSpeed={setSpeed} />
+      <SpeedMenu
+      Speed={speed}
+      setSpeed={setSpeed}
+      />
 
       <SelectMenu 
       sortingAlgo={sortingAlgo} 

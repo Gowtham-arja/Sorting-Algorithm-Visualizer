@@ -3,10 +3,12 @@ const sleep = (ms) => {
 };
 
 async function BubbleSort({
-    array, setArray,
+    array, 
+    setArray,
     setComparing,
     setSorted,
-    speed
+    speed,
+    isSortingRef
 }) {
     let arrayCopy = array;
     let time;
@@ -22,8 +24,11 @@ async function BubbleSort({
     let n = arrayCopy.length;
 
     for (let i = 0; i < n - 1; i++) {
+
+        if (!isSortingRef.current) return;
         for (let j = 0; j < n - i - 1; j++) {
 
+            if (!isSortingRef.current) return;
             setComparing([j, j + 1]);
             await sleep(time);
 

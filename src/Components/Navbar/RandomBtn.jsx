@@ -16,6 +16,8 @@ function RandomBtn(props) {
     <button
     className='bg-slate-800 hover:bg-blue-400 text-white font-bold py-2 px-3 ml-1 rounded'
     onClick={() => {
+        props.isSortingRef.current = false;
+        props.setComparing([]);
         props.setSorted([]);
         const randomArray = GenerateRandomArray();
         props.setArray(randomArray);

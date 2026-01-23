@@ -1,11 +1,13 @@
 import React from 'react'
 import NavBar from './Components/Navbar/NavBar'
 import { useState } from 'react';
+import { useRef } from 'react';
 import Bars from './Components/Bars/Bars';
 import BubbleSort from './Algorithms/BubbleSort';
 
 function App() {
 
+  const isSortingRef = useRef(false);
   const [array, setArray] = useState([]);
   const [sortingAlgo, setSortingAlgo] = useState("Bubble Sort");
   const [speed, setSpeed] = useState("Medium");
@@ -15,6 +17,7 @@ function App() {
   
   const StartSorting = () => {
 
+    isSortingRef.current = true;
     setComparing([]);
     setSorted([]);
 
@@ -22,19 +25,13 @@ function App() {
 
       BubbleSort(
         {
-          array, setArray, 
+          array,
+          setArray, 
           setComparing,
           setSorted, 
-          speed
-        }
-      );
-
-    } 
-    else if (sortingAlgo === "Selection Sort") {
-      console.log("Running Selection Sort");
-    } 
-    else if (sortingAlgo === "Insertion Sort") {
-      console.log("Running Insertion Sort");
+          speed,
+          isSortingRef
+        });
     }
   };
 
@@ -54,6 +51,8 @@ function App() {
       speed={speed} setSpeed={setSpeed}
       StartSorting={StartSorting} 
       setSorted={setSorted}
+      isSortingRef={isSortingRef}
+      setComparing={setComparing}
       />
 
     </div>

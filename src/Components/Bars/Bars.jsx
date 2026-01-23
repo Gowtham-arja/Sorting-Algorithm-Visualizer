@@ -1,4 +1,4 @@
-function Bars({ array, comparing = [], sorted = [] }) {
+function Bars({ array, comparing = [], sorted = [], selectionIndex}) {
   const maxValue = Math.max(...array);
 
   return (
@@ -15,6 +15,8 @@ function Bars({ array, comparing = [], sorted = [] }) {
                 ? "bg-yellow-400"
                 : isSorted
                 ? "bg-green-600"
+                :index === selectionIndex
+                ? "bg-red-500"
                 : "bg-cyan-400"
             }`}
             style={{

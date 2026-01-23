@@ -17,6 +17,9 @@ function NavBar({ array, setArray, sortingAlgo, setSortingAlgo, speed, setSpeed,
       <ArrayInput
       setArray={setArray} 
       setSorted={setSorted}
+      isSortingRef={isSortingRef}
+      setComparing={setComparing}
+      setSelectionIndex={setSelectionIndex}
       />
 
       <RandomBtn
@@ -46,6 +49,9 @@ function NavBar({ array, setArray, sortingAlgo, setSortingAlgo, speed, setSpeed,
       <SelectMenu 
       sortingAlgo={sortingAlgo} 
       setSortingAlgo={setSortingAlgo}
+      isSortingRef={isSortingRef}
+      setComparing={setComparing}
+      setSelectionIndex={setSelectionIndex}
       />
 
 

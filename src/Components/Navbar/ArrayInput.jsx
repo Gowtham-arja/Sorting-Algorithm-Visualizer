@@ -1,6 +1,6 @@
 import React, { use } from 'react'
 
-function ArrayInput({ setArray ,setSorted}) {
+function ArrayInput({ setArray ,setSorted, isSortingRef, setComparing, setSelectionIndex}) {
   const handleChange = (value) => {
     const arrayValues = value
       .split(",")
@@ -13,6 +13,9 @@ function ArrayInput({ setArray ,setSorted}) {
   return (
     <input
       onChange={(e) => {
+        isSortingRef.current = false;
+        setSelectionIndex(null);
+        setComparing([]);
         handleChange(e.target.value)
         setSorted([]);
       }}

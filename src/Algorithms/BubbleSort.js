@@ -11,16 +11,11 @@ async function BubbleSort({
     isSortingRef
 }) {
     let arrayCopy = array;
-    let time;
-    if(speed === 'Slow'){
-        time = 600;
-    }
-    else if(speed === 'Medium'){
-        time = 400;
-    }
-    else if(speed === 'Fast'){
-        time = 200;
-    }
+    
+    const time =
+    speed === 'Slow' ? 1000 :
+    speed === 'Medium' ? 700 : 300;
+
     let n = arrayCopy.length;
 
     for (let i = 0; i < n - 1; i++) {

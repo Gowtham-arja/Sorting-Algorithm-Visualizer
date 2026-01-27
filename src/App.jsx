@@ -5,6 +5,7 @@ import { useRef } from 'react';
 import Bars from './Components/Bars/Bars';
 import BubbleSort from './Algorithms/BubbleSort';
 import SelectionSort from './Algorithms/SelectionSort';
+import InsertionSort from './Algorithms/InsertionSort';
 
 function App() {
 
@@ -46,6 +47,19 @@ function App() {
           speed,
           isSortingRef,
           setSelectionIndex
+        });
+    }
+
+    else if (sortingAlgo === "Insertion Sort") {
+
+      InsertionSort(
+        {
+          array,
+          setArray, 
+          setComparing,
+          setSorted,
+          speed,
+          isSortingRef
         });
     }
   };

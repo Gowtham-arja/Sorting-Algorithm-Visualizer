@@ -10,9 +10,10 @@ async function SelectionSort({
   setSelectionIndex
 }) {
   let arrayCopy = array;
+
   const time =
-    speed === 'Slow' ? 600 :
-    speed === 'Medium' ? 400 : 100;
+    speed === 'Slow' ? 1000 :
+    speed === 'Medium' ? 700 : 300;
 
   let n = arrayCopy.length;
 

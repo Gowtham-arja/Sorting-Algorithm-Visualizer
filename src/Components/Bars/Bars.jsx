@@ -22,7 +22,6 @@ function Bars({ array, comparing = [], sorted = [], selectionIndex}) {
             style={{
               height: `${(560 * value) / maxValue}px`,
               width: `${100 / array.length}%`,
-              transform: isComparing ? "scale(1.05)" : "scale(1)",
             }}
           />
         );

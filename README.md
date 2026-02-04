@@ -2,7 +2,8 @@
 
 - 📊 Visualizes sorting algorithms using dynamic bars
 - 🎚️ Adjustable speed control (Slow / Medium / Fast)
-- 🔄 Safe interruption logic
+- ⏳ Async/await based animation with controlled delays
+- 🔄 State-based interrupt mechanism
   - Sorting stops immediately if:
     - New data is randomized
     - Array size is changed mid-execution
@@ -40,3 +41,7 @@
 # 🔗 Live Demo
 https://sorting-algorithm-visualizer-six-sigma.vercel.app/
 
+# 🌱 Future Improvements
+- Add Merge Sort and Quick Sort
+- Display time and space complexity for each algorithm
+- Improve mobile responsiveness
